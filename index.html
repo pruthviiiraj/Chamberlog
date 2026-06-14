@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,13 +9,21 @@
   <title>Chamber Logs</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <header>
-    <a href="/" class="site-name">⬡ Chamber Logs</a>
-    <nav>
-      <a href="/">Posts</a>
-      <a href="/about.html">About</a>
+    <div class="header-top">
+      <a href="/" class="site-name">⬡ Chamber Logs</a>
+      <a href="/about.html" class="about-link">About</a>
+    </div>
+    <nav class="header-nav">
+      <a href="/" class="active">Recent</a>
+      <a href="/categories/philosophy.html">Philosophy</a>
+      <a href="/categories/mind.html">Mind</a>
+      <a href="/categories/learning.html">Learning</a>
+      <a href="/categories/history.html">History</a>
+      <a href="/categories/health.html">Health</a>
     </nav>
   </header>
 
@@ -22,150 +31,50 @@
     <section class="intro">
       <p>Notes from a life of deliberate living.<br>Human performance. Philosophy. One idea at a time.</p>
     </section>
-
     <section class="posts">
 
-      <!-- PASTE NEW POSTS AT THE TOP -->
-      <!-- Example post entry:
       <article>
         <span class="date">2026-06-14</span>
-        <a href="/posts/your-post-slug.html" class="post-title">Your Post Title</a>
-        <p class="post-excerpt">A short excerpt or first line of the post.</p>
-        <div class="post-tags">
-          <span class="tag">philosophy</span>
-          <span class="tag">mind</span>
-        </div>
-      </article>
-      -->
-
-      <article>
-        <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-the-gap-is-real-the-deadline-isnt.html" class="post-title">The gap is real. The deadline isn't.</a>
-        <p class="post-excerpt">The deadlines people torture themselves with were never derived from their own potential.</p>
-        <div class="post-tags">
-          <span class="tag">philosophy</span>
-          <span class="tag">mind</span>
-        </div>
+        <a href="/posts/2026-06-14-the-gap-is-real-the-deadline-isnt.html" class="post-title">The gap is real. The
+          deadline isn't.</a>
+        <p class="post-excerpt">The deadlines people torture themselves with were never derived from their own
+          potential.</p>
+        <div class="post-tags"><span class="tag">philosophy</span><span class="tag">mind</span></div>
       </article>
 
       <article>
         <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-why-every-attempt-to-quit-scrolling-failed.html" class="post-title">Why every attempt to quit scrolling has failed</a>
-        <p class="post-excerpt">The reason you can't quit isn't that you're weak. It's that you've been using the wrong diagnosis.</p>
-        <div class="post-tags">
-          <span class="tag">mind</span>
-          <span class="tag">habits</span>
-        </div>
+        <a href="/posts/2026-06-14-why-every-attempt-to-quit-scrolling-failed.html" class="post-title">Why every attempt
+          to quit scrolling has failed</a>
+        <p class="post-excerpt">The reason you can't quit isn't that you're weak. It's that you've been using the wrong
+          diagnosis.</p>
+        <div class="post-tags"><span class="tag">mind</span><span class="tag">habits</span></div>
       </article>
 
       <article>
         <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-the-boredom-you-keep-running-from.html" class="post-title">The boredom you keep running from is exactly what you need</a>
+        <a href="/posts/2026-06-14-the-boredom-you-keep-running-from.html" class="post-title">The boredom you keep
+          running from is exactly what you need</a>
         <p class="post-excerpt">People who never experience boredom end up with the most boring lives.</p>
-        <div class="post-tags">
-          <span class="tag">mind</span>
-          <span class="tag">habits</span>
-        </div>
+        <div class="post-tags"><span class="tag">mind</span><span class="tag">habits</span></div>
       </article>
 
       <article>
         <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-your-brain-is-running-a-threat-response.html" class="post-title">Your brain is running a threat response for things that don't exist</a>
-        <p class="post-excerpt">Your brain cannot fully distinguish between an imagined threat and a real one. This is not a bug.</p>
-        <div class="post-tags">
-          <span class="tag">mind</span>
-          <span class="tag">health</span>
-        </div>
+        <a href="/posts/2026-06-14-your-brain-is-running-a-threat-response.html" class="post-title">Your brain is
+          running a threat response for things that don't exist</a>
+        <p class="post-excerpt">Your brain cannot fully distinguish between an imagined threat and a real one. This is
+          not a bug.</p>
+        <div class="post-tags"><span class="tag">mind</span><span class="tag">health</span></div>
       </article>
 
       <article>
         <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-caesar-how-power-actually-works.html" class="post-title">Caesar figured out how power actually works. Then it killed him.</a>
-        <p class="post-excerpt">When Caesar crossed the Rubicon, everyone expected executions. Caesar did something different.</p>
-        <div class="post-tags">
-          <span class="tag">philosophy</span>
-          <span class="tag">history</span>
-        </div>
-      </article>
-
-      <article>
-        <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-fewer-options-more-done.html" class="post-title">Fewer options, more done</a>
-        <p class="post-excerpt">When there are no limits, you are not in charge. Your desires are.</p>
-        <div class="post-tags">
-          <span class="tag">philosophy</span>
-          <span class="tag">productivity</span>
-        </div>
-      </article>
-
-      <article>
-        <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-the-thing-caesar-proved-and-disproved.html" class="post-title">The thing Caesar proved, and then disproved</a>
-        <p class="post-excerpt">The Roman Republic Caesar moved against had elections and laws. By every procedural measure, it was legitimate. And yet.</p>
-        <div class="post-tags">
-          <span class="tag">philosophy</span>
-          <span class="tag">history</span>
-        </div>
-      </article>
-
-      <article>
-        <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-youve-been-measuring-meditation-wrong.html" class="post-title">You've been measuring meditation by the wrong thing</a>
-        <p class="post-excerpt">If you judge your meditation sessions by how calm you feel during them, you're measuring the least important thing.</p>
-        <div class="post-tags">
-          <span class="tag">health</span>
-          <span class="tag">focus</span>
-        </div>
-      </article>
-
-      <article>
-        <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-most-of-what-you-do-when-studying-isnt-learning.html" class="post-title">Most of what you do when studying isn't learning</a>
-        <p class="post-excerpt">Color-coding your notes feels like progress. Building the right folder structure feels like progress. Almost none of it is.</p>
-        <div class="post-tags">
-          <span class="tag">learning</span>
-          <span class="tag">productivity</span>
-        </div>
-      </article>
-
-      <article>
-        <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-the-problem-isnt-the-pain.html" class="post-title">The problem isn't the pain. It's expecting it to resolve.</a>
-        <p class="post-excerpt">Most people don't suffer from sadness. They suffer from the fear of sadness.</p>
-        <div class="post-tags">
-          <span class="tag">philosophy</span>
-          <span class="tag">mind</span>
-        </div>
-      </article>
-
-      <article>
-        <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-what-youre-performing-isnt-what-you-want.html" class="post-title">What you're performing and what you actually want aren't the same thing</a>
-        <p class="post-excerpt">Blanche Ingram had everything society considered impressive. Rochester looked at her and felt nothing.</p>
-        <div class="post-tags">
-          <span class="tag">philosophy</span>
-          <span class="tag">mind</span>
-        </div>
-      </article>
-
-      <article>
-        <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-what-jane-eyre-understands-about-injustice.html" class="post-title">What Jane Eyre understands about surviving an environment that's against you</a>
-        <p class="post-excerpt">When the Reed household became unbearable, Jane's first move was to find a window seat, pull a curtain across, and read.</p>
-        <div class="post-tags">
-          <span class="tag">philosophy</span>
-          <span class="tag">books</span>
-        </div>
-      </article>
-
-      <article>
-        <span class="date">2026-06-14</span>
-        <a href="/posts/2026-06-14-the-okinawans-live-longest.html" class="post-title">The Okinawans live the longest and it's not about the food</a>
-        <p class="post-excerpt">Hara hachi bu isn't a diet. It's a cellular intervention.</p>
-        <div class="post-tags">
-          <span class="tag">health</span>
-          <span class="tag">nutrition</span>
-        </div>
+        <a href="/posts/2026-06-14-caesar-how-power-actually-works.html" class="post-title">Caesar figured out how power
+          actually works. Then it killed him.</a>
+        <p class="post-excerpt">When Caesar crossed the Rubicon, everyone expected executions. Caesar did something
+          different.</p>
+        <div class="post-tags"><span class="tag">philosophy</span><span class="tag">history</span></div>
       </article>
 
     </section>
@@ -176,4 +85,5 @@
   </footer>
 
 </body>
+
 </html>
