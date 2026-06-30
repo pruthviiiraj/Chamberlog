@@ -520,3 +520,92 @@ header {
   cursor: default;
   user-select: none;
 }
+
+/* ─── EMAIL POPUP ────────────────────────────────────── */
+.email-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.email-popup-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.email-popup {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  max-width: 420px;
+  width: calc(100% - 3rem);
+  position: relative;
+}
+
+.email-popup-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem;
+  transition: color 0.2s;
+}
+
+.email-popup-close:hover {
+  color: var(--accent);
+}
+
+.email-popup-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.email-popup-heading {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: var(--text);
+  margin: 0 0 1.25rem;
+  line-height: 1.4;
+}
+
+.email-popup-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.email-popup-note {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 0;
+  opacity: 0.7;
+}
+
+.email-popup-success {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--accent);
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0;
+}
