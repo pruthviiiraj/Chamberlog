@@ -16,17 +16,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://chamberlog.in/scripts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chamberlog.in/categories/fitness.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://chamberlog.in/categories/health.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://chamberlog.in/categories/history.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://chamberlog.in/categories/learning.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

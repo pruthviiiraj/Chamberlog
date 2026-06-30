@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Complete archive of all Chamber Logs posts on philosophy, health, mind, learning, fitness, and history." />
+  <meta name="description" content="Complete archive of all Chamber Logs posts on philosophy, health, mind, and fitness." />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>All Posts — Chamber Logs</title>
@@ -16,15 +16,22 @@
   <header>
     <div class="header-top">
       <a href="/" class="site-name">⬡ Chamber Logs</a>
-      <a href="/about.html" class="about-link">About</a>
+      <button class="hamburger" id="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
-    <nav class="header-nav">
-      <a href="/">Recent</a>
-      <a href="/categories/philosophy.html">Philosophy</a>
-      <a href="/categories/mind.html">Mind</a>
-      <a href="/categories/learning.html">Learning</a>
-      <a href="/categories/history.html">History</a>
-      <a href="/categories/health.html">Health</a>
+    <nav class="header-nav" id="main-nav">
+      <a href="/">Home</a>
+      <div class="nav-blog">
+        <button class="nav-blog-toggle" id="blog-toggle" aria-expanded="false" aria-haspopup="true">Blog <span class="nav-chevron">›</span></button>
+        <div class="nav-submenu" id="blog-submenu">
+          <a href="/categories/health.html">Health</a>
+          <a href="/categories/fitness.html">Fitness</a>
+          <a href="/categories/mind.html">Mind</a>
+          <a href="/categories/philosophy.html">Philosophy</a>
+        </div>
+      </div>
+      <a href="/scripts.html">Scripts</a>
+      <a href="/about.html">About</a>
+      <span class="nav-placeholder">Ebooks</span>
     </nav>
   </header>
 
@@ -66,7 +73,7 @@
         <span class="date">2026-06-21</span>
         <a href="/posts/2026-06-21-the-knot-and-the-sword.html" class="post-title">The Knot and the Sword</a>
         <p class="post-excerpt">Alexander's genius and his downfall share the same mechanism: precision without self-awareness.</p>
-        <div class="post-tags"><span class="tag">philosophy</span><span class="tag">history</span></div>
+        <div class="post-tags"><span class="tag">philosophy</span></div>
       </article>
 
       <article>
@@ -178,7 +185,7 @@
         <span class="date">2026-06-18</span>
         <a href="/posts/2026-06-18-the-most-valuable-thing-you-learn-is-how-you-learn.html" class="post-title">The Most Valuable Thing You Learn Is How You Learn</a>
         <p class="post-excerpt">The personal curriculum trend is not about what you study. The real product is metacognition.</p>
-        <div class="post-tags"><span class="tag">learning</span><span class="tag">mind</span></div>
+        <div class="post-tags"><span class="tag">mind</span></div>
       </article>
 
       <article>
@@ -192,7 +199,7 @@
         <span class="date">2026-06-18</span>
         <a href="/posts/2026-06-18-the-shell-looks-fine-the-substance-left-years-ago.html" class="post-title">The Shell Looks Fine. The Substance Left Years Ago.</a>
         <p class="post-excerpt">Caesar did not break the Republic. He noticed that it was already empty.</p>
-        <div class="post-tags"><span class="tag">philosophy</span><span class="tag">history</span></div>
+        <div class="post-tags"><span class="tag">philosophy</span></div>
       </article>
 
       <article>
@@ -241,21 +248,21 @@
         <span class="date">2026-06-14</span>
         <a href="/posts/2026-06-14-caesar-how-power-actually-works.html" class="post-title">Caesar figured out how power actually works. Then it killed him.</a>
         <p class="post-excerpt">When Caesar crossed the Rubicon, everyone expected purges. He did something different.</p>
-        <div class="post-tags"><span class="tag">philosophy</span><span class="tag">history</span></div>
+        <div class="post-tags"><span class="tag">philosophy</span></div>
       </article>
 
       <article>
         <span class="date">2026-06-14</span>
         <a href="/posts/2026-06-14-fewer-options-more-done.html" class="post-title">Fewer options, more done</a>
         <p class="post-excerpt">When there are no limits, you are not in charge. Your desires are.</p>
-        <div class="post-tags"><span class="tag">philosophy</span><span class="tag">productivity</span></div>
+        <div class="post-tags"><span class="tag">philosophy</span></div>
       </article>
 
       <article>
         <span class="date">2026-06-14</span>
         <a href="/posts/2026-06-14-most-of-what-you-do-when-studying-isnt-learning.html" class="post-title">Most of what you do when studying isn't learning</a>
         <p class="post-excerpt">Color-coding your notes feels like progress. Almost none of it is.</p>
-        <div class="post-tags"><span class="tag">learning</span><span class="tag">productivity</span></div>
+        <div class="post-tags"><span class="tag">mind</span></div>
       </article>
 
       <article>
@@ -290,7 +297,7 @@
         <span class="date">2026-06-14</span>
         <a href="/posts/2026-06-14-the-thing-caesar-proved-and-disproved.html" class="post-title">The thing Caesar proved, and then disproved</a>
         <p class="post-excerpt">The Roman Republic Caesar moved against had elections, consuls, and laws. And yet.</p>
-        <div class="post-tags"><span class="tag">philosophy</span><span class="tag">history</span></div>
+        <div class="post-tags"><span class="tag">philosophy</span></div>
       </article>
 
       <article>
@@ -325,15 +332,66 @@
         <span class="date">2026-06-14</span>
         <a href="/posts/2026-06-14-youve-been-measuring-meditation-wrong.html" class="post-title">You've been measuring meditation by the wrong thing</a>
         <p class="post-excerpt">If you judge your meditation sessions by how calm you feel during them, you're measuring the least important thing.</p>
-        <div class="post-tags"><span class="tag">health</span><span class="tag">focus</span></div>
+        <div class="post-tags"><span class="tag">mind</span></div>
       </article>
 
     </section>
   </main>
 
   <footer>
+    <div class="email-capture">
+      <p class="email-label">Get new posts by email</p>
+      <form action="YOUR_BUTTONDOWN_URL" method="post" target="popupwindow" class="email-form">
+        <input type="email" name="email" placeholder="your@email.com" class="email-input" required />
+        <button type="submit" class="email-submit">Subscribe</button>
+      </form>
+    </div>
     <p>Chamber Logs &mdash; chamberlog.in</p>
   </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('menu-toggle');
+      var nav = document.getElementById('main-nav');
+      var blogBtn = document.getElementById('blog-toggle');
+      var blogMenu = document.getElementById('blog-submenu');
+
+      function closeMenu() {
+        nav.classList.remove('open');
+        btn.textContent = '☰';
+        btn.setAttribute('aria-expanded', 'false');
+        if (blogBtn && blogMenu) {
+          blogMenu.classList.remove('open');
+          blogBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
+
+      btn.addEventListener('click', function () {
+        if (nav.classList.contains('open')) {
+          closeMenu();
+        } else {
+          nav.classList.add('open');
+          btn.textContent = '✕';
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      nav.addEventListener('click', function (e) {
+        if (e.target === nav) closeMenu();
+      });
+
+      if (blogBtn && blogMenu) {
+        blogBtn.addEventListener('click', function () {
+          var open = blogMenu.classList.toggle('open');
+          blogBtn.setAttribute('aria-expanded', String(open));
+        });
+        if (blogMenu.querySelector('a.active')) {
+          blogMenu.classList.add('open');
+          blogBtn.setAttribute('aria-expanded', 'true');
+        }
+      }
+    })();
+  </script>
 
 </body>
 

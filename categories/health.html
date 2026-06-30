@@ -14,15 +14,22 @@
     <header>
         <div class="header-top">
             <a href="/" class="site-name">⬡ Chamber Logs</a>
-            <a href="/about.html" class="about-link">About</a>
+            <button class="hamburger" id="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
         </div>
-        <nav class="header-nav">
-            <a href="/">Recent</a>
-            <a href="/categories/philosophy.html">Philosophy</a>
-            <a href="/categories/mind.html">Mind</a>
-            <a href="/categories/learning.html">Learning</a>
-            <a href="/categories/history.html">History</a>
-            <a href="/categories/health.html" class="active">Health</a>
+        <nav class="header-nav" id="main-nav">
+            <a href="/">Home</a>
+            <div class="nav-blog">
+                <button class="nav-blog-toggle" id="blog-toggle" aria-expanded="false" aria-haspopup="true">Blog <span class="nav-chevron">›</span></button>
+                <div class="nav-submenu" id="blog-submenu">
+                    <a href="/categories/health.html" class="active">Health</a>
+                    <a href="/categories/fitness.html">Fitness</a>
+                    <a href="/categories/mind.html">Mind</a>
+                    <a href="/categories/philosophy.html">Philosophy</a>
+                </div>
+            </div>
+            <a href="/scripts.html">Scripts</a>
+            <a href="/about.html">About</a>
+            <span class="nav-placeholder">Ebooks</span>
         </nav>
     </header>
     <main>
@@ -91,12 +98,16 @@
                 <div class="post-tags"><span class="tag">health</span><span class="tag">mind</span></div>
             </article>
             <article>
-                <span class="date">2026-06-14</span>
-                <a href="/posts/2026-06-14-youve-been-measuring-meditation-wrong.html" class="post-title">You've been
-                    measuring meditation by the wrong thing</a>
-                <p class="post-excerpt">If you judge your meditation sessions by how calm you feel during them, you're
-                    measuring the least important thing.</p>
-                <div class="post-tags"><span class="tag">health</span><span class="tag">focus</span></div>
+                <span class="date">2026-06-16</span>
+                <a href="/posts/2026-06-16-your-bones-are-only-as-strong-as-what-you-did-last-month.html" class="post-title">Your bones are only as strong as what you did last month</a>
+                <p class="post-excerpt">Every week you stop loading your bones, they get slightly thinner. That is not a metaphor.</p>
+                <div class="post-tags"><span class="tag">health</span><span class="tag">fitness</span></div>
+            </article>
+            <article>
+                <span class="date">2026-06-16</span>
+                <a href="/posts/2026-06-16-your-lower-back-pain-is-probably-not-a-lower-back-problem.html" class="post-title">Your lower back pain is probably not a lower back problem</a>
+                <p class="post-excerpt">Most lower back pain is a hip mobility problem that the lower back is being forced to solve.</p>
+                <div class="post-tags"><span class="tag">health</span><span class="tag">fitness</span></div>
             </article>
             <article>
                 <span class="date">2026-06-14</span>
@@ -116,8 +127,59 @@
         </section>
     </main>
     <footer>
+        <div class="email-capture">
+            <p class="email-label">Get new posts by email</p>
+            <form action="YOUR_BUTTONDOWN_URL" method="post" target="popupwindow" class="email-form">
+                <input type="email" name="email" placeholder="your@email.com" class="email-input" required />
+                <button type="submit" class="email-submit">Subscribe</button>
+            </form>
+        </div>
         <p>Chamber Logs &mdash; chamberlog.in</p>
     </footer>
+
+    <script>
+        (function () {
+            var btn = document.getElementById('menu-toggle');
+            var nav = document.getElementById('main-nav');
+            var blogBtn = document.getElementById('blog-toggle');
+            var blogMenu = document.getElementById('blog-submenu');
+
+            function closeMenu() {
+                nav.classList.remove('open');
+                btn.textContent = '☰';
+                btn.setAttribute('aria-expanded', 'false');
+                if (blogBtn && blogMenu) {
+                    blogMenu.classList.remove('open');
+                    blogBtn.setAttribute('aria-expanded', 'false');
+                }
+            }
+
+            btn.addEventListener('click', function () {
+                if (nav.classList.contains('open')) {
+                    closeMenu();
+                } else {
+                    nav.classList.add('open');
+                    btn.textContent = '✕';
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            nav.addEventListener('click', function (e) {
+                if (e.target === nav) closeMenu();
+            });
+
+            if (blogBtn && blogMenu) {
+                blogBtn.addEventListener('click', function () {
+                    var open = blogMenu.classList.toggle('open');
+                    blogBtn.setAttribute('aria-expanded', String(open));
+                });
+                if (blogMenu.querySelector('a.active')) {
+                    blogMenu.classList.add('open');
+                    blogBtn.setAttribute('aria-expanded', 'true');
+                }
+            }
+        })();
+    </script>
 </body>
 
 </html>

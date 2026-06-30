@@ -14,15 +14,22 @@
     <header>
         <div class="header-top">
             <a href="/" class="site-name">⬡ Chamber Logs</a>
-            <a href="/about.html" class="about-link">About</a>
+            <button class="hamburger" id="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
         </div>
-        <nav class="header-nav">
-            <a href="/">Recent</a>
-            <a href="/categories/philosophy.html" class="active">Philosophy</a>
-            <a href="/categories/mind.html">Mind</a>
-            <a href="/categories/learning.html">Learning</a>
-            <a href="/categories/history.html">History</a>
-            <a href="/categories/health.html">Health</a>
+        <nav class="header-nav" id="main-nav">
+            <a href="/">Home</a>
+            <div class="nav-blog">
+                <button class="nav-blog-toggle" id="blog-toggle" aria-expanded="false" aria-haspopup="true">Blog <span class="nav-chevron">›</span></button>
+                <div class="nav-submenu" id="blog-submenu">
+                    <a href="/categories/health.html">Health</a>
+                    <a href="/categories/fitness.html">Fitness</a>
+                    <a href="/categories/mind.html">Mind</a>
+                    <a href="/categories/philosophy.html" class="active">Philosophy</a>
+                </div>
+            </div>
+            <a href="/scripts.html">Scripts</a>
+            <a href="/about.html">About</a>
+            <span class="nav-placeholder">Ebooks</span>
         </nav>
     </header>
     <main>
@@ -46,7 +53,7 @@
                 <span class="date">2026-06-21</span>
                 <a href="/posts/2026-06-21-the-knot-and-the-sword.html" class="post-title">The Knot and the Sword</a>
                 <p class="post-excerpt">Alexander's genius and his downfall share the same mechanism: precision without self-awareness.</p>
-                <div class="post-tags"><span class="tag">philosophy</span><span class="tag">history</span></div>
+                <div class="post-tags"><span class="tag">philosophy</span></div>
             </article>
             <article>
                 <span class="date">2026-06-20</span>
@@ -64,7 +71,7 @@
                 <span class="date">2026-06-18</span>
                 <a href="/posts/2026-06-18-the-shell-looks-fine-the-substance-left-years-ago.html" class="post-title">The Shell Looks Fine. The Substance Left Years Ago.</a>
                 <p class="post-excerpt">Caesar did not break the Republic. He noticed that it was already empty.</p>
-                <div class="post-tags"><span class="tag">philosophy</span><span class="tag">history</span></div>
+                <div class="post-tags"><span class="tag">philosophy</span></div>
             </article>
             <article>
                 <span class="date">2026-06-18</span>
@@ -98,13 +105,13 @@
                     how power actually works. Then it killed him.</a>
                 <p class="post-excerpt">When Caesar crossed the Rubicon, everyone expected executions. Caesar did
                     something different.</p>
-                <div class="post-tags"><span class="tag">philosophy</span><span class="tag">history</span></div>
+                <div class="post-tags"><span class="tag">philosophy</span></div>
             </article>
             <article>
                 <span class="date">2026-06-14</span>
                 <a href="/posts/2026-06-14-fewer-options-more-done.html" class="post-title">Fewer options, more done</a>
                 <p class="post-excerpt">When there are no limits, you are not in charge. Your desires are.</p>
-                <div class="post-tags"><span class="tag">philosophy</span><span class="tag">productivity</span></div>
+                <div class="post-tags"><span class="tag">philosophy</span></div>
             </article>
             <article>
                 <span class="date">2026-06-14</span>
@@ -112,7 +119,7 @@
                     Caesar proved, and then disproved</a>
                 <p class="post-excerpt">The Roman Republic Caesar moved against had elections and laws. By every
                     procedural measure, it was legitimate. And yet.</p>
-                <div class="post-tags"><span class="tag">philosophy</span><span class="tag">history</span></div>
+                <div class="post-tags"><span class="tag">philosophy</span></div>
             </article>
             <article>
                 <span class="date">2026-06-14</span>
@@ -140,8 +147,59 @@
         </section>
     </main>
     <footer>
+        <div class="email-capture">
+            <p class="email-label">Get new posts by email</p>
+            <form action="YOUR_BUTTONDOWN_URL" method="post" target="popupwindow" class="email-form">
+                <input type="email" name="email" placeholder="your@email.com" class="email-input" required />
+                <button type="submit" class="email-submit">Subscribe</button>
+            </form>
+        </div>
         <p>Chamber Logs &mdash; chamberlog.in</p>
     </footer>
+
+    <script>
+        (function () {
+            var btn = document.getElementById('menu-toggle');
+            var nav = document.getElementById('main-nav');
+            var blogBtn = document.getElementById('blog-toggle');
+            var blogMenu = document.getElementById('blog-submenu');
+
+            function closeMenu() {
+                nav.classList.remove('open');
+                btn.textContent = '☰';
+                btn.setAttribute('aria-expanded', 'false');
+                if (blogBtn && blogMenu) {
+                    blogMenu.classList.remove('open');
+                    blogBtn.setAttribute('aria-expanded', 'false');
+                }
+            }
+
+            btn.addEventListener('click', function () {
+                if (nav.classList.contains('open')) {
+                    closeMenu();
+                } else {
+                    nav.classList.add('open');
+                    btn.textContent = '✕';
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            nav.addEventListener('click', function (e) {
+                if (e.target === nav) closeMenu();
+            });
+
+            if (blogBtn && blogMenu) {
+                blogBtn.addEventListener('click', function () {
+                    var open = blogMenu.classList.toggle('open');
+                    blogBtn.setAttribute('aria-expanded', String(open));
+                });
+                if (blogMenu.querySelector('a.active')) {
+                    blogMenu.classList.add('open');
+                    blogBtn.setAttribute('aria-expanded', 'true');
+                }
+            }
+        })();
+    </script>
 </body>
 
 </html>
